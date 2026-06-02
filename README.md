@@ -50,6 +50,36 @@ El sistema incluye autenticación con JWT, control de roles, gestión de usuario
 * Exportación de reportes en Excel.
 * Diseño responsive para escritorio, tablet y celular.
 
+## Capturas del sistema
+
+### Página principal
+
+![Página principal](docs/landing.png)
+
+### Inicio de sesión
+
+![Inicio de sesión](docs/login.png)
+
+### Panel administrador
+
+![Panel administrador](docs/admin-dashboard.png)
+
+### Panel estudiante
+
+![Panel estudiante](docs/student-dashboard.png)
+
+### Calendario académico
+
+![Calendario académico](docs/student-calendar.png)
+
+### Chat académico
+
+![Chat académico](docs/chat.png)
+
+### Vista previa de archivos PDF
+
+![Vista previa PDF](docs/pdf-preview.png)
+
 ## Arquitectura del proyecto
 
 ```text
@@ -154,5 +184,5 @@ Proyecto full stack funcional en entorno local, desarrollado con frontend, backe
 
 ## Autor
 
-Fernando Concha Jimenez
+**Fernando Concha Jimenez**
 Estudiante de Ingeniería de Sistemas e Informática.
