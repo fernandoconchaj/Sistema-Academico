@@ -1,95 +1,70 @@
-# Sistema Académico Universitario Backend
+# Sistema Academico
 
-Backend para el proyecto Sistema Académico Universitario usando Spring Boot, PostgreSQL, JWT y JPA.
+Sistema web full stack para la gestion academica de usuarios, cursos, tareas, evaluaciones, reportes, chat academico, clases virtuales y archivos academicos. El proyecto integra un backend desarrollado con Spring Boot y un frontend desarrollado con React, conectado a una base de datos PostgreSQL.
 
-## Requisitos
+## Descripcion general
 
-- JDK 17
-- Maven
+Sistema Academico es una plataforma orientada a instituciones educativas. Permite centralizar la administracion academica en un solo entorno, separando funcionalidades segun el rol del usuario: administrador, docente y estudiante.
+
+El sistema incluye autenticacion con JWT, control de roles, gestion de usuarios, gestion de cursos, paneles por rol, entrega de tareas, evaluaciones, reportes, chat academico y vista previa de archivos PDF.
+
+## Tecnologias utilizadas
+
+### Backend
+
+- Java 21
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- JWT
 - PostgreSQL
+- Apache POI
+- Apache Commons
+- Google Guava
+- Logback
+- Maven
 
-## Base de datos
+### Frontend
 
-Crear en PostgreSQL:
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+- Axios
+- React Router
 
-```sql
-CREATE DATABASE bd_universidad_tecnologica_arequipa;
-```
+## Funcionalidades principales
 
-## Configuracion
+- Inicio de sesion con autenticacion JWT.
+- Control de acceso por roles.
+- Panel administrador.
+- Gestion de usuarios.
+- Activacion y desactivacion de cuentas.
+- Bloqueo de acceso para usuarios inactivos.
+- Gestion de cursos y matriculas.
+- Panel docente para tareas, evaluaciones, anuncios y clases virtuales.
+- Panel estudiante para cursos, calendario, tareas y evaluaciones.
+- Chat academico.
+- Vista previa de archivos PDF.
+- Descarga de documentos academicos.
+- Exportacion de reportes en Excel.
+- Diseno responsive para escritorio, tablet y celular.
 
-Archivo:
-
-```text
-src/main/resources/application.properties
-```
-
-Por defecto usa:
-
-```properties
-spring.datasource.username=postgres
-spring.datasource.password=12345
-```
-
-Cambia la contraseña si tu PostgreSQL usa otra.
-
-## Ejecutar
-
-```powershell
-mvn spring-boot:run
-```
-
-## Probar backend
-
-```text
-http://localhost:8080/api/public/health
-http://localhost:8080/api/public/cursos
-```
-
-## Usuarios iniciales
+## Arquitectura del proyecto
 
 ```text
-admin@universidad.edu.pe / 12345
-estudiante@universidad.edu.pe / 12345
-docente@universidad.edu.pe / 12345
-mate@universidad.edu.pe / 12345
-fisica@universidad.edu.pe / 12345
-```
-
-## Endpoints principales
-
-Auth:
-
-```text
-POST /api/auth/login
-POST /api/auth/register
-```
-
-Estudiante:
-
-```text
-GET /api/estudiante/dashboard
-GET /api/estudiante/cursos/{id}
-POST /api/estudiante/tareas/{id}/entregar
-POST /api/estudiante/evaluaciones/{id}/resolver
-```
-
-Docente:
-
-```text
-GET /api/docente/dashboard
-POST /api/docente/tareas
-POST /api/docente/evaluaciones
-POST /api/docente/zoom
-POST /api/docente/anuncios
-```
-
-Admin:
-
-```text
-GET /api/admin/dashboard
-POST /api/admin/usuarios
-POST /api/admin/cursos
-POST /api/admin/inscripciones
-GET /api/admin/reportes
-```
+Sistema-Academico
+├── backend
+│   ├── config
+│   ├── controller
+│   ├── dto
+│   ├── entity
+│   ├── repository
+│   ├── service
+│   └── util
+│
+└── frontend
+    ├── components
+    ├── pages
+    ├── services
+    └── utils
