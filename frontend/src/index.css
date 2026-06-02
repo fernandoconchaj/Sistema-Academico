@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: Inter, ui-sans-serif, system-ui, Arial, sans-serif;
+}
+
+.glass {
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.22);
+}
+
+.scrollbar-soft::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-soft::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (max-width: 480px) {
+  body {
+    background: #f8fafc;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 16px 45px rgba(15, 23, 42, 0.18);
+  }
+}
+
+
+@media (max-width: 640px) {
+  h1, h2, h3, p, span, a, button {
+    overflow-wrap: anywhere;
+  }
+
+  .grid {
+    min-width: 0;
+  }
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+.card-safe,
+section,
+article,
+form,
+main,
+header {
+  min-width: 0;
+}
+
+.break-safe {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  .shadow-card {
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+  }
+
+  table {
+    min-width: 640px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .rounded-\[2rem\],
+  .rounded-\[1\.75rem\],
+  .rounded-3xl {
+    border-radius: 1.25rem;
+  }
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+  outline: none;
+  background: #fff;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
